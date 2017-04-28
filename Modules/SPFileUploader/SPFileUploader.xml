@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FilesUpload>
+	<File Name="MasterPage1.master" SourceFolder="PhysicalPath\MPs" TargetLibrary="Master Page Gallery" TargetFolder="CustomFolder"></File>
+	<File Name="MasterPage1.html" SourceFolder="PhysicalPath\MPs" TargetLibrary="Master Page Gallery" TargetFolder="CustomFolder"></File>
+	<File Name="File1.docx" SourceFolder="PhysicalPath\Docs" TargetLibrary="Documents" TargetFolder="Folder1"></File>
+	<File Name="File2.xlsx" SourceFolder="PhysicalPath\Docs" TargetLibrary="Documents" TargetFolder="Folder2/Sub1"></File>
+	<File Name="Picture1.png" SourceFolder ="PhysicalPath\Assets" TargetLibrary="Site Assets" TargetFolder=""></File>
+	<File Name="Picture2.png" SourceFolder ="PhysicalPath\Assets" TargetLibrary="Site Assets" TargetFolder="Folder1"></File>	
+</FilesUpload>
+
+
+
