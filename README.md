@@ -76,7 +76,7 @@ Refresh all the fields of a list based on their Site Column definition
 extractListViews.ps1 -siteURL "http://spweb_url" [-destinationFolderPath <LocalFolderPathForGeneratedFile>]
 ```
 
-##  Import all Lists Views to another SPWeb using browseAndParseListViewsXML()
+###  Import all Lists Views to another SPWeb using browseAndParseListViewsXML()
 To ensure that these files are uploaded, you need to call browseFilesAndFoldersToUpload().
 This function will browse and parse the SPFileUploader.xml and initiate the upload of all referenced files into the right location (library, folder, subfolder, ...) on site siteURL.
 
