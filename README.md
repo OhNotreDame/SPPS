@@ -2,13 +2,15 @@
 Powershell scripts to interact with SharePoint
 
 
-##  Refresh SPFields on SPList using refreshSiteColumsOnList()
+##  Refresh SPFields on SPList using refreshSiteColumsOnList.ps1
 Refresh all the fields of a list based on their Site Column definition
 ```Powershell
 refreshSiteColumsOnList.ps1 -siteURL "http://spweb_url" -listName "name of the list"
 ```
 
-##  Upload files on site using browseFilesAndFoldersToUpload()
+##  SPFileUploader
+
+### XML File Structure
 Relies on an XML File SPFileUploader.xml describing the list and location of file to be uploaded.
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -18,14 +20,17 @@ Relies on an XML File SPFileUploader.xml describing the list and location of fil
 </FilesUpload>
 ```
 
+### Upload files on site using browseFilesAndFoldersToUpload()
 To ensure that these files are uploaded, you need to call browseFilesAndFoldersToUpload().
 This function will browse and parse the SPFileUploader.xml and initiate the upload of all referenced files into the right location (library, folder, subfolder, ...) on site siteURL.
 
 ```Powershell
 Import-Module "$PathToModuleFolder\SPHelpers\SPHelpers.psm1"
-Import-Module "PathToModuleFolder\SPFileUploader\SPFileUploader.psm1"
-$fileToUploadFilePath = "configFileToUpload_FilePath\SPFileUploader.xml"
-$fileToUploadLocation = "uploadFilesLocation\SPFileUploader\"
+Import-Module "$PathToModuleFolder\SPFileUploader\SPFileUploader.psm1"
+# Configuration file 'SPFileUploader.xml'
+$fileToUploadFilePath = "folderPath\'SPFileUploader.xml'
+# Location of the file to be uploaded
+$fileToUploadLocation = "folderPath\SPFileUploader\"
 if(Test-Path $fileToUploadFilePath)
 {
   $uploadFilesXML = LoadXMLFile -xmlPath  $fileToUploadFilePath
@@ -43,3 +48,59 @@ else
   Write-Warning "XML File for <SPFileUploader> does not exist."
 }
 ```
+
+## SPListViews
+
+### XML File Structure
+```XML
+<?xml version="1.0" encoding="utf-8" ?>
+<SPListViews>
+ <AddView>
+    <List Title="List-1">
+	<View Name="My Super View 1" URL="View1" DefaultView="TRUE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+		<!-- STANDARD CAML QUERY VIEW with Query, ViewFields, ... nodes -->
+	</View>
+	<View Name="View 2" URL="View2" DefaultView="FALSE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+		<!-- STANDARD CAML QUERY VIEW with Query, ViewFields, ... nodes -->
+	</View>
+    </List>
+ </AddView>
+ <UpdateView></UpdateView>
+ <DeleteView></DeleteView>
+</SPListViews> 
+```
+
+### Export all Lists Views from a SPWeb using extractListViews.ps1
+Refresh all the fields of a list based on their Site Column definition
+```Powershell
+extractListViews.ps1 -siteURL "http://spweb_url" [-destinationFolderPath <LocalFolderPathForGeneratedFile>]
+```
+
+##  Import all Lists Views to another SPWeb using browseAndParseListViewsXML()
+To ensure that these files are uploaded, you need to call browseFilesAndFoldersToUpload().
+This function will browse and parse the SPFileUploader.xml and initiate the upload of all referenced files into the right location (library, folder, subfolder, ...) on site siteURL.
+
+```Powershell
+Import-Module "$PathToModuleFolder\SPHelpers\SPHelpers.psm1"
+Import-Module "PathToModuleFolder\SPListViews\SPListViews.psm1"
+# Configuration file 'SPFileUploader.xml'
+$listViewXmlFilePath = "folderPath\SPListViews.xml"
+if(Test-Path $listViewXmlFilePath)
+{
+  $listViewsXML = LoadXMLFile -xmlPath $listViewXmlFilePath
+  if($listViewsXML -ne $null -and $listViewsXML.HasChildNodes)
+  {
+    browseAndParseListViewsXML -siteURL $siteURL -listViewsXML $listViewsXML
+  }
+  else
+  {
+    Write-Warning "XML File for <SPListViews> is empty." 
+  }
+}
+else
+{
+  Write-Warning "XML File for <SPListViews> does not exist."
+}
+```
+
+
