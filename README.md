@@ -25,12 +25,12 @@ To ensure that these files are uploaded, you need to call browseFilesAndFoldersT
 This function will browse and parse the SPFileUploader.xml and initiate the upload of all referenced files into the right location (library, folder, subfolder, ...) on site siteURL.
 
 ```Powershell
-Import-Module "$PathToModuleFolder\SPHelpers\SPHelpers.psm1"
-Import-Module "$PathToModuleFolder\SPFileUploader\SPFileUploader.psm1"
+Import-Module "pathTo_ModuleFolder\SPHelpers\SPHelpers.psm1"
+Import-Module "pathTo_ModuleFolder\SPFileUploader\SPFileUploader.psm1"
 # Configuration file 'SPFileUploader.xml'
-$fileToUploadFilePath = "folderPath\'SPFileUploader.xml'
+$fileToUploadFilePath = "pathTo_ConfigFile\SPFileUploader.xml"
 # Location of the file to be uploaded
-$fileToUploadLocation = "folderPath\SPFileUploader\"
+$fileToUploadLocation = "pathTo_SourceFolder\SPFileUploader\"
 if(Test-Path $fileToUploadFilePath)
 {
   $uploadFilesXML = LoadXMLFile -xmlPath  $fileToUploadFilePath
@@ -81,10 +81,10 @@ To ensure that these files are uploaded, you need to call browseFilesAndFoldersT
 This function will browse and parse the SPFileUploader.xml and initiate the upload of all referenced files into the right location (library, folder, subfolder, ...) on site siteURL.
 
 ```Powershell
-Import-Module "$PathToModuleFolder\SPHelpers\SPHelpers.psm1"
-Import-Module "PathToModuleFolder\SPListViews\SPListViews.psm1"
-# Configuration file 'SPFileUploader.xml'
-$listViewXmlFilePath = "folderPath\SPListViews.xml"
+Import-Module "pathTo_ModuleFolder\SPHelpers\SPHelpers.psm1"
+Import-Module "pathTo_ModuleFolder\SPListViews\SPListViews.psm1"
+# Configuration file 'SPListViews.xml'
+$listViewXmlFilePath = "pathTo_ConfigFile\SPListViews.xml"
 if(Test-Path $listViewXmlFilePath)
 {
   $listViewsXML = LoadXMLFile -xmlPath $listViewXmlFilePath
