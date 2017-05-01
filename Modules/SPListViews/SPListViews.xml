@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SPListViews>
+	<AddView>
+		<List Title="List-1">
+			<View Name="My Super View 1" URL="View1" DefaultView="TRUE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+			<View Name="View 2" URL="View2" DefaultView="FALSE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>	
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+		</List>
+		<List Title="List-2">
+			<View Name="View 1" DefaultView="FALSE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+			<View Name="View 2" DefaultView="TRUE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+					<GroupBy>
+						<FieldRef Name= "Field1"/>
+					</GroupBy>
+				</Query>	
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+		</List>
+	</AddView>
+	<UpdateView>
+		<List Title="List-1">
+			<View Name="View 1" DefaultView="TRUE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+			<View Name="View 2" DefaultView="FALSE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>	
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+		</List>
+		<List Title="List-2">
+			<View Name="View 1" DefaultView="FALSE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+				</Query>
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+			<View Name="View 2" DefaultView="TRUE" Hidden="False" ReadOnly ="False" RowLimit="50" Paged="True">
+				<Query>
+					<OrderBy>
+						<FieldRef Ascending="TRUE" Name= "Field1"/>
+					</OrderBy>
+					<GroupBy>
+						<FieldRef Name= "Field1"/>
+					</GroupBy>
+				</Query>	
+				<ViewFields>
+					<FieldRef Name="Field1" />
+					<FieldRef Name="Field2" />
+				</ViewFields>
+			</View>
+		</List>
+	</UpdateView>
+	<DeleteView> 
+		<List Title="List-2">
+			<View Name="View 1" />
+			<View Name="View 2" />
+		</List>
+	</DeleteView> 
+</SPListViews>
