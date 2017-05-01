@@ -8,10 +8,10 @@ Refresh all the fields of a list based on their Site Column definition
 refreshSiteColumsOnList.ps1 -siteURL "http://spweb_url" -listName "name of the list"
 ```
 
-##  SPFileUploader
+##  Module: SPFileUploader
 See [SPFileUploader Wiki Page](https://github.com/OhNotreDame/SPPS/wiki/SPFileUploader)
 
-## SPListViews
+## Module: SPListViews
 See [SPListViews Wiki Page](https://github.com/OhNotreDame/SPPS/wiki/SPListViews)
 
 
