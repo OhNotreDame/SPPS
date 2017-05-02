@@ -1,5 +1,6 @@
 # SPPS
-Powershell scripts to interact with SharePoint
+Powershell Framework including a set of modules and scripts designed to interact with SharePoint (201x), Nintex Forms (201x) and Nintex Workflows (201x).
+
 
 ## Powershell Scripts
 
@@ -9,7 +10,7 @@ Get all Workflows Instances from a specific status and generate dedicated CSV fi
 GetWorkflowsInstancesBystatus.ps1 -status Running
 ```
 
-##  Refresh SPFields on SPList using refreshSiteColumsOnList.ps1
+###  Refresh SPFields on SPList using refreshSiteColumsOnList.ps1
 Refresh all the fields of a list based on their Site Column definition
 ```Powershell
 refreshSiteColumsOnList.ps1 -siteURL "http://spweb_url" -listName "name of the list"
