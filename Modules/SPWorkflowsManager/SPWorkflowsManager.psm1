@@ -16,6 +16,7 @@
 	
 .EXAMPLE
 	startSiteWorkflow -siteURL <siteURL> -workflowName <workflowName> [-workflowData <workflowData>]
+	startSiteWorkflow -siteURL http://sharepoint_siteurl/sites/debug -workflowName "Send Mail Site"
 	
 .OUTPUTS
 	None
@@ -139,6 +140,7 @@ function startSiteWorkflow()
 	
 .EXAMPLE
 	startListWorkflow -siteURL <siteURL> -workflowName <workflowName> -listName <listName> -itemID <itemID> [-workflowData <workflowData>]
+	startListWorkflow -siteURL http://sharepoint_siteurl/sites/debug -workflowName "Send Mail" -listName "Tasks" -itemID 1
 	
 .OUTPUTS
 	None
@@ -287,6 +289,7 @@ function startListWorkflow()
 	
 .EXAMPLE
 	startListWorkflowViaWorkflowManager -siteURL <siteURL> -workflowName <workflowName> -listName <listName> -itemID <itemID>
+	startListWorkflowViaWorkflowManager -siteURL http://sharepoint_siteurl/sites/debug -workflowName "Send Mail" -listName "Tasks" -itemID 1
 	
 .OUTPUTS
 	None
