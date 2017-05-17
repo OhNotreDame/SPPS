@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Workflows>
+	<Workflow Name="TestList1 WF" Type="List" List="Test List-1" FileName=".\NintexWorkflows\TestList1WF.nwf" />
+	<Workflow Name="TestList2 WF" Type="List" List="Test List-2" FileName=".\NintexWorkflows\TestList2WF.nwf" />
+	<Workflow Name="TestList3 WF" Type="List" List="Test List-3" FileName=".\NintexWorkflows\TestList3WF.nwf" />
+	<Workflow Name="TestList4 WF" Type="List" List="Test List-4" FileName=".\NintexWorkflows\TestList4WF.nwf" />
+	<Workflow Name="WEW CT Workflow" Type="Reusable" FileName=".\NintexWorkflows\WEWCTWorkflow.nwf" />
+	<Workflow Name="ZEZ CT Workflow" Type="Reusable" FileName=".\NintexWorkflows\ZEZCTWorkflow.nwf" />
+</Workflows>
