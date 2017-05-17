@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SPListPermissions>
+	<AddPermission>
+		<Permission>
+			<Type>Group</Type>
+			<Name>By Powershell</Name>
+			<ListName>Calendar</ListName>
+			<PermissionLevel>Read</PermissionLevel>
+		</Permission>
+		<Permission>
+			<Type>User</Type>
+			<Name>cid\bouzaria</Name>
+			<ListName>Calendar</ListName>
+			<PermissionLevel>Read</PermissionLevel>
+		</Permission>
+		<Permission>
+			<Type>Group</Type>
+			<Name>By Powershell</Name>
+			<ListName>tst</ListName>
+			<PermissionLevel>Contribute</PermissionLevel>
+		</Permission>
+	</AddPermission>
+	<ChangePermission>
+		<Permission>
+			<Type>Group</Type>
+			<Name>By Powershell</Name>
+			<ListName>Calendar</ListName>
+			<PermissionLevel>Contribute</PermissionLevel>
+		</Permission>
+	</ChangePermission>
+	<DeletePermission>
+		<Permission>
+			<Type>Group</Type>
+			<Name>Group 2</Name>
+			<ListName>Calendar</ListName>
+			<PermissionLevel>Read</PermissionLevel>
+		</Permission>
+		<Permission>
+			<Type>Group</Type>
+			<Name>Group 2</Name>
+			<ListName>Calendar</ListName>
+			<PermissionLevel>Contribute</PermissionLevel>
+		</Permission>
+	</DeletePermission>
+</SPListPermissions>

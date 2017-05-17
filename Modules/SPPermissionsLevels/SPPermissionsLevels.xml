@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SPPermissionsLevels>
+  <AddPermissionsLevel>
+    <PermissionsLevel>
+      <Name>Permission Level 1</Name>
+      <Description> Can view, add approve documents. </Description>
+      <BasePermissions>EmptyMask,ApproveItems</BasePermissions>
+    </PermissionsLevel>
+    <PermissionsLevel>
+      <Name>Permission Level 2</Name>
+      <Description> Can view and edit items. </Description>
+      <BasePermissions>EmptyMask,EditListItems,ViewListItems,OpenItems,ViewVersions</BasePermissions>
+    </PermissionsLevel>
+    <PermissionsLevel>
+      <Name>Contribute no delete</Name>
+      <Description> Can view, add and update list items and documents, but not delete items or documents</Description>
+      <BasePermissions>EmptyMask,AddListItems,EditListItems,ViewListItems,OpenItems,ViewVersions,CreateAlerts,BrowseDirectories,ViewPages,BrowseUserInfo,UseRemoteAPIs,UseClientIntegration,EditMyUserInfo,ManagePersonalViews,ViewFormPages,Open,CreateSSCSite,AddDelPrivateWebParts,UpdatePersonalWebParts</BasePermissions>
+    </PermissionsLevel>
+  </AddPermissionsLevel>
+  <ChangePermissionsLevel>
+    <PermissionsLevel>
+      <Name>Contribute no delete</Name>
+      <Description> Can view, add and update list items and documents, but not delete items or documents</Description>
+      <BasePermissions>EmptyMask,AddListItems,EditListItems,ViewListItems,OpenItems,ViewVersions,CreateAlerts,BrowseDirectories,ViewPages,BrowseUserInfo,UseRemoteAPIs,UseClientIntegration,EditMyUserInfo,ManagePersonalViews,ViewFormPages,Open,CreateSSCSite,AddDelPrivateWebParts,UpdatePersonalWebParts</BasePermissions>
+    </PermissionsLevel>
+  </ChangePermissionsLevel>
+  <DeletePermissionsLevel>
+    <PermissionsLevel>
+      <Name>Permission Level 1</Name>
+    </PermissionsLevel>
+  </DeletePermissionsLevel>
+</SPPermissionsLevels>

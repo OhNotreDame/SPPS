@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SPSitePermissions>
+  <AddPermission>
+    <Permission>
+      <Type>Group</Type>
+      <Name>Group 1</Name>
+      <PermissionLevel>Read</PermissionLevel>
+    </Permission>
+    <Permission>
+      <Type>user</Type>
+      <Name>cid\bonnard</Name>
+      <PermissionLevel>Read</PermissionLevel>
+    </Permission>
+    <Permission>
+      <Type>user</Type>
+      <Name>cid\lavanchy</Name>
+      <PermissionLevel>Edit</PermissionLevel>
+    </Permission>
+    <Permission>
+      <Type>Group</Type>
+      <Name>Group 2</Name>
+      <PermissionLevel>Read</PermissionLevel>
+    </Permission>
+    <Permission>
+      <Type>User</Type>
+      <Name>cid\bonnard</Name>
+      <PermissionLevel>Read</PermissionLevel>
+    </Permission>
+  </AddPermission>
+  <ChangePermission>
+    <Permission>
+      <Type>Group</Type>
+      <Name>Group 2</Name>
+      <PermissionLevel>Contribute</PermissionLevel>
+    </Permission>
+    <Permission>
+      <Type>Group</Type>
+      <Name>Group 1</Name>
+      <PermissionLevel>Full Control</PermissionLevel>
+    </Permission>
+  </ChangePermission>
+  <DeletePermission>
+    <Permission>
+      <Type>user</Type>
+      <Name>cid\bonnard</Name>
+      <PermissionLevel>Read</PermissionLevel>
+    </Permission>
+  </DeletePermission>
+</SPSitePermissions>
