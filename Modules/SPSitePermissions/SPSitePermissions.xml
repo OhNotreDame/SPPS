@@ -8,12 +8,12 @@
     </Permission>
     <Permission>
       <Type>user</Type>
-      <Name>cid\bonnard</Name>
+      <Name>domain\userName</Name>
       <PermissionLevel>Read</PermissionLevel>
     </Permission>
     <Permission>
       <Type>user</Type>
-      <Name>cid\lavanchy</Name>
+      <Name>domain\userName</Name>
       <PermissionLevel>Edit</PermissionLevel>
     </Permission>
     <Permission>
@@ -23,7 +23,7 @@
     </Permission>
     <Permission>
       <Type>User</Type>
-      <Name>cid\bonnard</Name>
+      <Name>domain\userName</Name>
       <PermissionLevel>Read</PermissionLevel>
     </Permission>
   </AddPermission>
@@ -42,7 +42,7 @@
   <DeletePermission>
     <Permission>
       <Type>user</Type>
-      <Name>cid\bonnard</Name>
+      <Name>domain\userName</Name>
       <PermissionLevel>Read</PermissionLevel>
     </Permission>
   </DeletePermission>

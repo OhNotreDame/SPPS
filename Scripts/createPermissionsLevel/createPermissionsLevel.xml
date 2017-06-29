@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPPermissionsLevels>
+  <AddPermissionsLevel>
+    <PermissionsLevel>
+      <Name>PL Name 1</Name>
+      <Description>PL Descriptions 1</Description>
+      <BasePermissions>ViewListItems, AddListItems, EditListItems, DeleteListItems,ApproveItems, OpenItems, ViewVersions, DeleteVersions, CancelCheckout, ManagePersonalViews, ManageLists, ViewFormPages, Open, ViewPages, AddAndCustomizePages, ViewUsageData, CreateSSCSite, ManagePermissions, BrowseDirectories, BrowseUserInfo, AddDelPrivateWebParts, UpdatePersonalWebParts, UseClientIntegration, UseRemoteAPIs, CreateAlerts, EditMyUserInfo, EnumeratePermissions</BasePermissions>
+    </PermissionsLevel>
+  </AddPermissionsLevel>
+  <ChangePermissionsLevel></ChangePermissionsLevel>
+  <DeletePermissionsLevel></DeletePermissionsLevel>
+</SPPermissionsLevels>

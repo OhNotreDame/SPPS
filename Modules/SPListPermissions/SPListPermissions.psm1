@@ -6,6 +6,8 @@
 #	Relies on an XML Configuration file for ListPermissions description.
 #	See SPListPermissions.xml for Schema
 #
+# SOURCE : https://github.com/OhNotreDame/SPPS
+#
 ##############################################################################################
 
 

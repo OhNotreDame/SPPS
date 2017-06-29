@@ -6,6 +6,8 @@
 #	Relies on an XML Configuration file for Site Group description.
 #	See SPSitePermissions.xml for Schema
 #
+# SOURCE : https://github.com/OhNotreDame/SPPS
+#
 ##############################################################################################
 
 

@@ -1,3 +1,13 @@
+##############################################################################################
+#              
+# NAME: SPWorkflowsManager.psm1 
+# PURPOSE: 
+#	Start Workflows directly from Powershell
+#
+# SOURCE : https://github.com/OhNotreDame/SPPS
+#
+##############################################################################################
+
 <#
 .SYNOPSIS
 	Start the Site Workflow $workflowName using Nintex Webservice (NintexWorkflow/Workflow.asmx)

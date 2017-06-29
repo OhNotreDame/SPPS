@@ -2,8 +2,11 @@
 #              
 # NAME: SPHelpers.psm1 
 # PURPOSE: Global and Generic functions related to SharePoint
+#
 # SOURCE : https://github.com/OhNotreDame/SPPS
+#
 ##############################################################################################
+
 
 
 <#

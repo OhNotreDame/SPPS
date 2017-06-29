@@ -1,11 +1,12 @@
 ﻿##############################################################################################
-# Module Name: SPPermissionsLevels.psm1  
-# AUTHOR: Shiv Tomar, Deepak Tejaniya, Julie Bonnard
-# CONTEXT: Governance Interim Changes – January 2016	
+# 
+# NAME: SPPermissionsLevels.psm1  
 # PURPOSE: Manage Role definitions in SharePoint site.
+#	See SPPermissionsLevels.xml for Schema
+#
+# SOURCE : https://github.com/OhNotreDame/SPPS
 #
 ##############################################################################################
-
 <#
 .SYNOPSIS
 	Parse the file SPPermissionsLevels XML object and initiate Permissions Level customization

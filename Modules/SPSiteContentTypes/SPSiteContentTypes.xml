@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentTypes>
+   <!-- Parent ContentType: Item (0x01) -->
+  <ContentType Name="UNHCRContentType1" Group="UNHCR" Description="UNHCR Content Type 1" ParentContentType="Item" >
+    <FieldRefs>
+      <FieldRef ID="{51367945-4897-4EA3-9D54-05DDF21FA653}" Name="LASMatterSecondOP" StaticName="LASMatterSecondOP" DisplayName="Second Opposing Party" Required="FALSE"/>
+      <FieldRef ID="{3ec54552-b072-43c1-9535-c7cd9781bac0}" Name="LASMatterRelatedMattText" DisplayName="Related Matters (Details)" Required="FALSE" Hidden="False"/>
+      <FieldRef ID="{72ec3a42-c084-497d-a38c-23285a62dcf3}" Name="Number" DisplayName="Number"  Required="True"  ReadOnly="True" Hidden="False" />
+      <FieldRef ID="{62C451A6-8614-4F9E-87E2-048134593C50}" Name="LASDocType" StaticName="LASDocType" DisplayName="Document Type" Required="FALSE" ReadOnly="False" Hidden="False"/>
+      <FieldRef ID="{30257e3e-dd1a-4120-842e-7b5693708898}" Name="Currency" DisplayName="Currency"  Required="True"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{cdc73ed3-9924-493e-854b-8ff772d18528}" Name="Boolean" DisplayName="Boolean" Required="True"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{fe2b8b67-7529-4fcb-8e50-24b6745a27b2}" Name="People" DisplayName="People"  Required="FALSE"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{74a3bafc-2486-4734-bb6f-0a32777676ab}" Name="Hyperlink" DisplayName="Hyperlink"  Required="FALSE" ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{0a7403a8-e754-49b4-895b-42b069bcc0d4}" Name="Image" DisplayName="Image"  Required="FALSE"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{af8b7477-20aa-41ad-b1ad-99de060cd453}" Name="DateTime" DisplayName="Date Time"  Required="FALSE" Hidden="False" />
+      <RemoveFieldRef ID="{0a7403a8-e754-49b4-895b-42b069bcc0d4}" Name="Image" /> 
+    </FieldRefs>
+</ContentType>
+<ContentType Name="UNHCRContentType2" Group="UNHCR" Description="UNHCR Content Type 2" ParentContentType="Item" >
+  <FieldRefs>
+      <FieldRef ID="{51367945-4897-4EA3-9D54-05DDF21FA653}" Name="LASMatterSecondOP" StaticName="LASMatterSecondOP" DisplayName="Second Opposing Party" Required="FALSE"/>
+      <FieldRef ID="{3ec54552-b072-43c1-9535-c7cd9781bac0}" Name="LASMatterRelatedMattText" DisplayName="Related Matters (Details)" Required="FALSE" Hidden="False"/>
+      <FieldRef ID="{72ec3a42-c084-497d-a38c-23285a62dcf3}" Name="Number" DisplayName="Number"  Required="True"  ReadOnly="True" Hidden="False" />
+      <FieldRef ID="{62C451A6-8614-4F9E-87E2-048134593C50}" Name="LASDocType" StaticName="LASDocType" DisplayName="Document Type" Required="FALSE" ReadOnly="False" Hidden="False"/>
+      <FieldRef ID="{30257e3e-dd1a-4120-842e-7b5693708898}" Name="Currency" DisplayName="Currency"  Required="True"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{cdc73ed3-9924-493e-854b-8ff772d18528}" Name="Boolean" DisplayName="Boolean" Required="True"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{fe2b8b67-7529-4fcb-8e50-24b6745a27b2}" Name="People" DisplayName="People"  Required="FALSE"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{74a3bafc-2486-4734-bb6f-0a32777676ab}" Name="Hyperlink" DisplayName="Hyperlink"  Required="FALSE" ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{0a7403a8-e754-49b4-895b-42b069bcc0d4}" Name="Image" DisplayName="Image"  Required="FALSE"  ReadOnly="False" Hidden="False" />
+      <FieldRef ID="{af8b7477-20aa-41ad-b1ad-99de060cd453}" Name="DateTime" DisplayName="Date Time"  Required="FALSE" Hidden="False" />
+      <RemoveFieldRef ID="{0a7403a8-e754-49b4-895b-42b069bcc0d4}" Name="Image" /> 
+    </FieldRefs>
+  </ContentType>
+</ContentTypes>
+
+
+

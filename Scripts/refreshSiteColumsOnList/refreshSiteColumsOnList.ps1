@@ -66,17 +66,28 @@ try
 				$myFieldsArray.Add($_.InternalName) > $null
 			}
 
-			foreach ($internalFieldName in $myFieldsArray) {
-				$fieldToUpdate = $curList.Fields.GetFieldByInternalName($internalFieldName)
+			[System.Threading.Thread]::CurrentThread.CurrentUICulture=$curWeb.UICulture;
+			foreach ($fieldName in $myFieldsArray) {
+				Write-Host "[$functionName] Refreshing column '$fieldName' on List" -ForegroundColor Cyan  `r
+				$fieldToUpdate = $curList.Fields.GetFieldByInternalName($fieldName)
 				if($fieldToUpdate -ne $null)
 				{
-					$parentWebField = $curWeb.Fields[$internalFieldName]
+					$parentWebField = $curWeb.Fields.GetFieldByInternalName($fieldName)
 					if($parentWebField -ne $null)
 					{
+						#$parentWebField.SchemaXml
 						$fieldToUpdate.SchemaXml = $parentWebField.SchemaXml;
 						$fieldToUpdate.Update();
 					}
-				} 
+					else
+					{
+						Write-Warning "[$functionName] Field '$fieldName' not found in SPWeb."
+					}
+				}
+				else
+				{
+					Write-Warning "[$functionName] Field '$fieldName' not found in List."
+				}
 			}
 			$curList.Update();
 

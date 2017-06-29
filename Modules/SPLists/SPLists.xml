@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Lists>
+	<List Name="List1" Title=" List-1" Type="100" QuickLaunch="True" Description=" Custom List" Url="List1" 
+	DisableAttachments="True|False" FolderCreation="True|False" EnableContentTypes="True|False" 
+	VersioningEnabled="True|False" EnableMinorVersions="True|False"  
+	OrderedList="True|False"  PrivateList="True|False" DisableGridEditing="True|False" NavigateForFormsPages="True|False" NoCrawl="True|False" 
+	DraftVersionVisibility="1|2" 
+	ModeratedList="True|False" ModerationType="True|False" >
+		<ContentTypes>
+			<ContentType Name="ContentType1" SetAsDefault="TRUE"/>
+		</ContentTypes>
+	</List>
+	<List Name="List2" Title=" List-2" Type="101" QuickLaunch="False" Description=" Custom List" Url ="Lists/List2">
+		<ContentTypes>
+			<ContentType Name="ContentType2" SetAsDefault="FALSE" />
+			<ContentType Name="ContentType1" SetAsDefault="FALSE" />
+		</ContentTypes>
+	</List>
+</Lists>

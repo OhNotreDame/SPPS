@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentTypes>
+	<ContentType Name="DocSet Custom" Group="" Description="" ParentContentType="Document Set" >
+		<FieldRefs>
+			<FieldRef ID="{ABC12345-ABCD-1234-5678-1234ABCD1234}" Name="InternalFieldName" StaticName="InternalFieldName" DisplayName="DisplayName" Required="TRUE"/>
+		</FieldRefs>
+		<AllowedContentTypes>
+		</AllowedContentTypes>
+		<SharedFields>
+			<SharedField Name="InternalFieldName" />
+		</SharedFields>
+		<WelcomePageFields>
+			<WelcomePageField Name="LinkFilenameNoMenu" />
+			<WelcomePageField Name="Title" />
+			<WelcomePageField Name="InternalFieldName" />
+		</WelcomePageFields>
+	</ContentType>
+</ContentTypes>

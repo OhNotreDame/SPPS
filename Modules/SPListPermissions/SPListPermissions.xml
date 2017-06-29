@@ -9,7 +9,7 @@
 		</Permission>
 		<Permission>
 			<Type>User</Type>
-			<Name>cid\bouzaria</Name>
+			<Name>domain\UserName</Name>
 			<ListName>Calendar</ListName>
 			<PermissionLevel>Read</PermissionLevel>
 		</Permission>
