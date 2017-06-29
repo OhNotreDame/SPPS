@@ -47,12 +47,12 @@ function ensureClaimsUser
 		[string]$siteURL,
 		[Parameter(Mandatory=$true, Position=2)]
 		[ValidateScript({
-			if ($_.StartsWith("cid\", $true, $null))
+			if ($_.StartsWith("domain\", $true, $null))
 			{
 				$true
 			}
 			else {
-				throw "`r`n$_ is not a valid username.`nPlease use following format <cid\userName>."
+				throw "`r`n$_ is not a valid username.`nPlease use following format <domain\userName>."
 			}
 		})]
 		[string]$userName
