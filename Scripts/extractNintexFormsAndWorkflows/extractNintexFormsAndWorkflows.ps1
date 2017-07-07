@@ -1,3 +1,31 @@
+<#
+
+.SYNOPSIS
+	Extract Nintex Forms and Workflows and generate XML files to be capable of redeploying them later
+	
+.DESCRIPTION
+	Extract Nintex Forms and Workflows and generate XML files to be capable of redeploying them later
+	
+.PARAMETER siteUrl
+	(Mandatory) URL of the SharePoint Site
+	
+.EXAMPLE
+	CreateIntranetPermissionsLevel.ps1 -siteUrl <siteURL>
+	
+.OUTPUTS
+	None
+
+.LINK
+	https://github.com/OhNotreDame/SPPS
+	
+.NOTES
+	Created by: JBO
+	Created: 27.03.2017
+	Last Updated by: JBO
+	Last Updated: 27.03.2017
+	
+#>
+
 param
 (
  [Parameter(Mandatory=$true, Position=1)]

@@ -9,10 +9,13 @@
 	
 .EXAMPLE
     GetSharePointLicenceKey.ps1 -version 2013
-  
+	
+.LINK
+	https://github.com/OhNotreDame/SPPS
+	
 .NOTES
-    Author: System Center Automation Team
-	Modified by: Julie Bonnard (JBON)
+	Created by:  System Center Automation Team
+	Modified by: JBO
 	Modified:  06/07/2017
 	Schedule : None
 #>

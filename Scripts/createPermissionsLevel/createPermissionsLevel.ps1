@@ -1,10 +1,10 @@
 <#
 
 .SYNOPSIS
-	Create all PROD Permissions Levels (Controle Total Assura, Publishers - Collab, Publishers - Départ, Collaboration sans suppression) on the site siteURL
+	Create all  Permissions Levels on the site siteURL
 	
 .DESCRIPTION
-	Create all PROD Permissions Levels (Controle Total Assura, Publishers - Collab, Publishers - Départ, Collaboration sans suppression) on the site siteURL
+	Create all PROD Permissions Levels on the site siteURL
 	
 .PARAMETER siteUrl
 	(Mandatory) URL of the SharePoint Site
@@ -16,7 +16,7 @@
 	None
 
 .LINK
-	None
+	https://github.com/OhNotreDame/SPPS
 	
 .NOTES
 	Created by: JBO
