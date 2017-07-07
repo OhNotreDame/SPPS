@@ -3,10 +3,10 @@
 	GetApplicationPoolRecyclingSchedule.ps1
 
 .SYNOPSIS
-	Get Application Pool Recycling Schedule
+	List Application Pools Recycling Schedule and Generate a CSV File
 
 .DESCRIPTION	
-	Get Application Pool Recycling Schedule
+	List Application Pool Recycling Schedule and Generate a CSV File
 	
 .LINK
 	https://github.com/OhNotreDame/SPPS
@@ -50,6 +50,10 @@ Import-Module WebAdministration
 # Starting SPAssignment
 Start-SPAssignment -Global
 
+# CSV file Settings
+$fileName = "$scriptName$(get-date -format 'yyyyMMddHHmm').csv"
+$fileDestLocation = "D:\Scripts\$scriptName"
+
 try
 {
 	#Intiate Results Object
@@ -84,6 +88,10 @@ catch
 }
 finally
 {
+	# Export CSV file
+	$rows | Export-Csv "$fileDestLocation\$fileName" -NoTypeInformation -Delimiter ";" -Encoding UTF8
+	Write-Host "CSV file available at $fileDestLocation\$fileName"  -ForegroundColor Green `r
+
 	# Stopping SPAssignment and Transcript
 	Stop-SPAssignment -Global
 
