@@ -1,0 +1,4 @@
+Microsoft.Office.Project.Server.PWA, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c
+Microsoft.Office.Project.Server.PWA,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c
+Microsoft.Office.Project.Server.PWA,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c
+Microsoft.Office.Project.Server.Administration, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c
