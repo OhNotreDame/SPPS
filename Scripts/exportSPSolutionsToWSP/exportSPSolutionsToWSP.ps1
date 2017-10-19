@@ -17,10 +17,13 @@
 	One XML file to recap all extracted WSP
 	One WSP by solution deployed on SPFarm
 	
+.LINK
+	https://github.com/OhNotreDame/SPPS
+	
 .NOTES
-	Author: JBON
+	Author: JBO
 	Created: 02/10/2017
-	Modified by: JBON
+	Modified by: JBO
 	Modified: 02/10/2017
 	
 #>
