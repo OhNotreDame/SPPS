@@ -27,6 +27,7 @@ param
 
 .EXAMPLE
 	uploadFileToSPLibrary.ps1 -siteURL <siteURL> -libraryName <libraryName> -filePath <filePath>
+	
 .OUTPUTS
 	None
 	
@@ -64,9 +65,20 @@ try
 		$file = get-childitem $filePath
 		Write-Host "fileName: $($file.FullName)";
 		
-		# Upload the file 
+		# Prepare the upload
 		$webclient = New-Object System.Net.WebClient 
+		
+		###### OPTION 1:  PROMPT FOR CREDENTIALS ######
 		$webclient.Credentials = Get-Credential $currentUser
+		################################################
+		
+		###### OPTION 2: NO PROMPT / DefaultNetworkCredentials ######
+		$credCache = New-Object System.Net.CredentialCache
+		$credCache.Add($siteURL, "NTLM", [System.Net.CredentialCache]::DefaultNetworkCredentials)
+		$webclient.Credentials = $credCache
+		#############################################################
+	
+		# Upload the file
 		$webclient.UploadFile($destination + "/" + $file.Name, "PUT", $file.FullName)
 		
 	}
