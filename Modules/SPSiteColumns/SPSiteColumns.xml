@@ -1,22 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Fields>
-  <Field ID="{51367945-4897-4EA3-9D54-05DDF21FA653}" Type="Text" Name="LASMatterSecondOP" StaticName="LASMatterSecondOP" DisplayName="Second Opposing Party" Group="UNHCR" Required="FALSE" Indexed="FALSE" MaxLength="255" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{3ec54552-b072-43c1-9535-c7cd9781bac0}" Type="Note" Name="LASMatterRelatedMattText" StaticName="LASMatterRelatedMattText" DisplayName="Related Matters (Details)" Group="UNHCR" Required="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{72ec3a42-c084-497d-a38c-23285a62dcf3}" Type="Number" Name="Number" StaticName="Number" DisplayName="Number" Group="UNHCR" Required="FALSE" Indexed="FALSE" Percentage="FALSE" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{62C451A6-8614-4F9E-87E2-048134593C50}" Type="Choice" Name="LASDocType" StaticName="LASDocType" DisplayName="Document Type" Group="UNHCR" Required="FALSE" Indexed="FALSE" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE">
-      <CHOICES>
-        <CHOICE>Administration</CHOICE>
-        <CHOICE>Information</CHOICE>
-      </CHOICES>
-  </Field>
-  <Field ID="{30257e3e-dd1a-4120-842e-7b5693708898}" Type="Currency" Name="Currency" StaticName="Currency" DisplayName="Currency" Group="UNHCR" Required="FALSE" Indexed="FALSE" Decimals="2" Min="0" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{cdc73ed3-9924-493e-854b-8ff772d18528}" Type="Boolean" Name="Boolean" StaticName="Boolean" DisplayName="Boolean" Group="UNHCR" Required="FALSE" Indexed="FALSE"  Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE">
-    <Default>0</Default>
-  </Field>
-  <Field ID="{fe2b8b67-7529-4fcb-8e50-24b6745a27b2}" Type="User" Name="People" StaticName="People" DisplayName="People" Group="UNHCR" Required="FALSE" Indexed="FALSE"  Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{74a3bafc-2486-4734-bb6f-0a32777676ab}" Type="URL" Name="Hyperlink" StaticName="Hyperlink" DisplayName="Hyperlink" Group="UNHCR" Required="FALSE" Indexed="FALSE"  Format="Image" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{0a7403a8-e754-49b4-895b-42b069bcc0d4}" Type="Image" Name="Image" StaticName="Image" DisplayName="Image" Group="UNHCR" Required="FALSE"  Indexed="FALSE" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
-  <Field ID="{af8b7477-20aa-41ad-b1ad-99de060cd453}" Type="DateTime" Name="DateTime" StaticName="DateTime" DisplayName="Date Time" Group="UNHCR" Required="FALSE" Indexed="FALSE" Format="DateOnly" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
+  <Field ID="{Field_GUID}" Type="Text" Name="Field_InternalName" StaticName="Field_StaticName" DisplayName="Field_DisplayName" Group="GroupName" Required="FALSE" Indexed="FALSE" MaxLength="255" Sealed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="TRUE" ShowInListSettings="TRUE" ShowInNewForm="TRUE"></Field>
 </Fields>
 
 
