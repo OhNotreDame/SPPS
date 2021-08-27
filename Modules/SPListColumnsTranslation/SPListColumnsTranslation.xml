@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SPListColumnsTranslation>
+  <List listName="TestRename">
+    <ListColumn internalName="Bip">
+      <Translation culture="de-DE">BipbipDE</Translation>
+      <Translation culture="fr-FR">Bipbip</Translation>
+    </ListColumn>
+    <ListColumn internalName="Bop">
+      <Translation culture="de-DE">BopbopDE</Translation>
+      <Translation culture="fr-FR">Bopbop</Translation>
+    </ListColumn>
+  </List>
+  <List listName="TestRename2">
+    <ListColumn internalName="Blop">
+      <Translation culture="de-DE">BlobDE</Translation>
+    </ListColumn>
+  </List>
+</SPListColumnsTranslation>
