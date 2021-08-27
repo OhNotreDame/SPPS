@@ -1247,6 +1247,131 @@ function removeContentTypeFromList()
 
 <#
 .SYNOPSIS
+	Ensure that the content-type $ct is present in the 'New' menu of list $listName. If not, add it to the bottom of the menu.
+	
+.DESCRIPTION
+	Ensure that the content-type $ct is present in the 'New' menu of list $listName. If not, add it to the bottom of the menu.
+	
+.PARAMETER siteUrl
+	URL of the SharePoint Site
+
+.PARAMETER listName
+	Name of the SharePoint List
+	
+.PARAMETER ctName
+	Name of the Content-Type
+	
+.EXAMPLE
+	ensureContentTypeIsInListNewButton -siteURL <SiteURL> -listName <ListName> -ctName <ctName>
+	
+.OUTPUTS
+	None
+
+.LINK
+	None
+	
+.NOTES
+	Created by: JBO
+	Created: 24.03.2021
+	Last Updated by: JBO
+	Last Updated: 24.03.2021
+#>
+
+function ensureContentTypeIsInListNewButton()
+{
+	[CmdletBinding()]
+	Param
+	(
+		[Parameter(Mandatory=$true, Position=1)]
+		[String]$siteURL,
+		[Parameter(Mandatory=$true, Position=2)]
+		[String]$listName,
+		[Parameter(Mandatory=$true, Position=3)]
+		[String]$ctName 
+	)
+    
+	$functionName = $MyInvocation.MyCommand.Name
+	Write-Debug "[$functionName] Entering function" 
+	Write-Debug "[$functionName] Parameter / siteURL: $siteURL"
+	Write-Debug "[$functionName] Parameter / listName: $listName"
+	Write-Debug "[$functionName] Parameter / ctName: $ctName"
+	
+	
+	try
+	{
+		$curWeb = Get-SPWeb $siteURL -ErrorAction SilentlyContinue
+		if($curWeb -ne $null)
+		{
+			$curList=$curWeb.Lists.TryGetList($listName)
+			if(($curList -ne $null))
+			{
+				$contentTypesInPlace = [Microsoft.SharePoint.SPContentType[]] $curList.rootFolder.UniqueContentTypeOrder
+				if ($contentTypesInPlace -ne $null)
+				{
+					$results = $contentTypesInPlace | where { $_.Name -eq $ctName} 
+					if ($results -ne $null)
+					{
+						Write-Verbose "[$functionName] Content-Type '$ctName' already exist in 'New' menu of List '$listName'."
+					}
+					else
+					{
+						Write-Verbose "$ctName Not Found"
+						$ctToAdd = $curList.ContentTypes[$ctName]
+						if($ctToAdd -ne $null)
+						{
+							#add our content type to the unique content type list
+							$contentTypesInPlace  = $contentTypesInPlace + $ctToAdd
+							$dirtyFlag = $true
+							Write-Verbose "$ContentTypeName queued to add to the new button"
+
+							$curList.rootFolder.UniqueContentTypeOrder = [Microsoft.SharePoint.SPContentType[]]  $contentTypesInPlace
+							#Update the root folder
+							$curList.rootFolder.Update()
+							$curList.Update()
+							Write-Host "[$functionName] Content-Type '$ctName' successfully set added to the 'New' menu of List '$listName'." -ForegroundColor Green `r
+						}
+						else
+						{
+							Write-Warning "[$functionName] Content-Type '$ctName' does not exist in List '$listName'."
+						}
+
+					}
+				}
+				else
+				{
+					Write-Warning "[$functionName] rootFolder.UniqueContentTypeOrder does not exist in List '$listName'."
+				}
+            }
+			else
+			{
+				Write-Warning "[$functionName] List '$listName' does not exist on Site '$siteURL'." 
+			}
+		}
+		else
+		{
+			Write-Warning "[$functionName] Site '$siteURL' not found."
+		}
+    }
+    catch [Exception]
+    {
+		Write-Host "/!\ $functionName An exception has been caught /!\ "  -ForegroundColor Red `r
+		Write-Host "Type: " $_.Exception.GetType().FullName   -ForegroundColor Red `r
+		Write-Host "Message: " $_.Exception.Message  -ForegroundColor Red `r
+		Write-Host "Stacktrace: " $_.Exception.Stacktrace  -ForegroundColor Red `r
+    }
+    finally
+    {
+		if($curWeb -ne $null)
+		{
+			$curWeb.Dispose()
+		}
+		Write-Debug "[$functionName] Exiting function" 
+    }
+ }
+
+
+<#
+.SYNOPSIS
 	Add the field $fieldStaticName to list $listName
 	
 .DESCRIPTION
