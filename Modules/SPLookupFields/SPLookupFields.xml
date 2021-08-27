@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Lookups>
+  <Lookup>
+    <Field ID='$fieldID' DisplayName='$fieldDisplayName' InternalName='$fieldStaticName' StaticName='$fieldStaticName' Type='Lookup'
+    Required='FALSE' Indexed='FALSE' MaxLength='255' Sealed='FALSE' ShowInDisplayForm='TRUE' ShowInEditForm='TRUE' ShowInListSettings='TRUE' ShowInNewForm='TRUE' Group='AAA' AllowMultipleValues='false' />
+    <Source>
+      <ListName>$srcListName</ListName>
+      <FieldName>$srcfieldToDisplay</FieldName>
+      <DependantFields>
+        <DependantField>
+          <srcFieldName>$srcFieldName</srcFieldName>
+          <dstStaticName>$dstStaticName</dstStaticName>
+          <dstDisplayName>$fieldDisplayName Item Title</dstDisplayName>
+        </DependantField>
+        <DependantField>
+          <srcFieldName>$srcFieldName2</srcFieldName>
+          <dstStaticName>$dstStaticName2</dstStaticName>
+          <dstDisplayName>$fieldDisplayName Creation Date</dstDisplayName>
+        </DependantField>
+      </DependantFields>
+    </Source>
+  </Lookup>
+</Lookups>

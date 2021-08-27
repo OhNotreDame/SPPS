@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LookupsAssociations>
+	<AssociateLookupToContentTypes>
+		<Lookup InternalName="" ContentTypeName="" />
+		<Lookup InternalName="" ContentTypeName="" />
+	</AssociateLookupToContentTypes>
+	<AssociateLookupToLists>
+		<Lookup InternalName="" ListName=""/>
+		<Lookup InternalName="" ListName=""/>
+	</AssociateLookupToLists>
+</LookupsAssociations>
