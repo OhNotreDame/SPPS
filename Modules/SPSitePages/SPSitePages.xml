@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SPSitePages>
+  <AddPage>
+    <Page Name="Home" Title="Home" PageLibrary="Site Pages" PageType="Wiki" PageLayout="1" />
+    <Page Name="Wiki Page 1" Title="Wiki Page 1" PageLibrary="Site Pages" PageType="Wiki" PageLayout="1" />
+    <Page Name="Wiki Page 2" Title="Wiki Page 2" PageLibrary="Site Pages" PageType="Wiki" PageLayout="1" />
+    <Page Name="Wiki Page 3" Title="Wiki Page 3" PageLibrary="Site Pages" PageType="Wiki" PageLayout="1" />
+    <Page Name="WebPart Page 1" Title="WebPart Page 1" PageLibrary="Site Pages" PageType="WebPart" PageLayout="2" />
+    <Page Name="WebPart Page 2" Title="WebPart Page 2" PageLibrary="Site Pages" PageType="WebPart" PageLayout="3" />
+    <Page Name="WebPart Page 3" Title="WebPart Page 3" PageLibrary="Site Pages" PageType="WebPart" PageLayout="4" />
+    <Page Name="Publishing Page 1" Title="Publishing Page 1" PageLibrary="Pages" PageType="Publishing" PageLayout="Body only" />
+    <Page Name="Publishing Page 2" Title="Publishing Page 2" PageLibrary="Pages" PageType="Publishing" PageLayout="Blank Web Part page" />
+  </AddPage>
+  <DeletePage>
+    <Page Name="Wiki Page 3" URL="PageServerRelativeURL"/>
+    <Page Name="WebPart Page 3" URL="PageServerRelativeURL"/>
+  </DeletePage>
+  <UpdatePage>
+    <Page Name="WebPart Page 1" PageLibrary="Site Pages" URL="SitePages/WebPart Page 1.aspx">
+      <WebPartsToAdd>
+        <WebPartToAdd>
+          <Title>WebPart 1</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.PageViewerWebPart</Type>
+          <ChromeType>None</ChromeType>
+          <WebPartZoneID>Header</WebPartZoneID>
+          <WebPartOrder>1</WebPartOrder>
+          <AllowZoneChange>false</AllowZoneChange>
+          <AllowMinimize>true</AllowMinimize>
+          <AllowConnect>true</AllowConnect>
+          <AllowEdit>false</AllowEdit>
+          <AllowClose>true</AllowClose>
+          <AllowRemove>true</AllowRemove>
+          <AllowHide>true</AllowHide>
+          <Width>335px</Width>
+          <Height>335px</Height>
+           <Content>
+              <ListViewWebPart>
+                <ListName>List-1</ListName>
+                <ListView>VIEW 2</ListView>
+              </ListViewWebPart>
+          </Content>
+        </WebPartToAdd>
+        <WebPartToAdd>
+          <Title>WebPart 2</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.XsltListViewWebPart</Type>
+          <ChromeType>None</ChromeType>
+          <WebPartZoneID>Header</WebPartZoneID>
+          <WebPartOrder>1</WebPartOrder>
+          <AllowZoneChange>false</AllowZoneChange>
+          <AllowMinimize>true</AllowMinimize>
+          <AllowConnect>true</AllowConnect>
+          <AllowEdit>false</AllowEdit>
+          <AllowClose>true</AllowClose>
+          <AllowRemove>true</AllowRemove>
+          <AllowHide>true</AllowHide>
+          <Width>335px</Width>
+          <Height>335px</Height>
+          <Content>
+            <ListViewWebPart>
+              <ListName>List-1</ListName>
+              <ListView>View 1</ListView>
+            </ListViewWebPart>
+            <ScriptEditorWebPart>
+            </ScriptEditorWebPart>
+          </Content>
+        </WebPartToAdd>
+      </WebPartsToAdd>
+      <WebPartsToRemove>
+        <WebPartToRemove>
+          <Title>WebPart 1</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.PageViewerWebPart</Type>
+        </WebPartToRemove>
+      </WebPartsToRemove>
+    </Page>
+
+    <Page Name=" WebPart Page 2" PageLibrary="Site Pages" URL="SitePages/ WebPart Page 2.aspx">
+      <WebPartsToAdd>
+        <WebPartToAdd>
+          <Title>WebPart 1</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.XsltListViewWebPart</Type>
+          <ChromeType>None</ChromeType>
+          <WebPartZoneID>Header</WebPartZoneID>
+          <WebPartOrder>1</WebPartOrder>
+          <AllowZoneChange>false</AllowZoneChange>
+          <AllowMinimize>true</AllowMinimize>
+          <AllowConnect>true</AllowConnect>
+          <AllowEdit>false</AllowEdit>
+          <AllowClose>true</AllowClose>
+          <AllowRemove>true</AllowRemove>
+          <AllowHide>true</AllowHide>
+          <Width>335px</Width>
+          <Height>335px</Height>
+
+          <Content>
+            <ListViewWebPart>
+              <ListName>List-2</ListName>
+              <ListView>View 2</ListView>
+            </ListViewWebPart>
+
+            <ScriptEditorWebPart>
+            </ScriptEditorWebPart>
+          </Content>
+        </WebPartToAdd>
+        <WebPartToAdd>
+          <Title>WebPart 2</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.PageViewerWebPart</Type>
+          <ChromeType>None</ChromeType>
+          <WebPartZoneID>Header</WebPartZoneID>
+          <WebPartOrder>1</WebPartOrder>
+          <AllowZoneChange>false</AllowZoneChange>
+          <AllowMinimize>true</AllowMinimize>
+          <AllowConnect>true</AllowConnect>
+          <AllowEdit>false</AllowEdit>
+          <AllowClose>true</AllowClose>
+          <AllowRemove>true</AllowRemove>
+          <AllowHide>true</AllowHide>
+          <Width>335px</Width>
+          <Height>335px</Height>
+
+          <Content>
+            <ListViewWebPart>
+              <ListName>List-2</ListName>
+              <ListView>View 1</ListView>
+            </ListViewWebPart>
+
+            <ScriptEditorWebPart>
+            </ScriptEditorWebPart>
+          </Content>
+        </WebPartToAdd>
+      </WebPartsToAdd>
+      <WebPartsToRemove>
+        <WebPartToRemove>
+          <Title>WebPart 1</Title>
+          <Type>Microsoft.SharePoint.WebPartPages.XsltListViewWebPart</Type>
+        </WebPartToRemove>
+      </WebPartsToRemove>
+    </Page>
+  </UpdatePage>
+</SPSitePages>
