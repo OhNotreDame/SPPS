@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<SPBranding>
+	<MasterPage>folderName/materpageName.master</MasterPage>		
+	<Logo>folderName/logoName.png</Logo>
+	<Theme>themeName</Theme>
+	<ColourFile>PaletteName.spcolor</ColourFile>
+</SPBranding>
