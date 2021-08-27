@@ -41,7 +41,7 @@ try
 		Write-Host "[$scriptName] solutionFolderPath: $solutionFolderPath" -foregroundcolor Cyan
 	}
 	
-	$ModuleFolderPath = "D:\QuickDeployFW\Modules"
+	$moduleFolderPath = "<PATH_TO_FRAMEWORK_ROOT_FOLDER>\Modules"
 	$destFolderArtefacts = "$solutionFolderPath\Artefacts"
 	$destFolderLogs = "$solutionFolderPath\Logs"
 	$destFolderWF = "$solutionFolderPath\NintexWorkflows" 
@@ -54,16 +54,16 @@ try
 	Write-Host "siteURL: $siteURL" -ForegroundColor Gray `r
 	Write-Host "solutionFolderPath: $solutionFolderPath" -ForegroundColor Gray `r
 	Write-Host "destFolderArtefacts: $destFolderArtefacts" -ForegroundColor Gray `r
-	Write-Host "ModuleFolderPath: $ModuleFolderPath" -ForegroundColor Gray `r
+	Write-Host "moduleFolderPath: $moduleFolderPath" -ForegroundColor Gray `r
 	Write-Host "scriptdir: $scriptdir" -ForegroundColor Gray `r
 	Write-Host "******************************************************************************" -ForegroundColor Magenta `r	
 		
 	#####################################################
-	# Loading QuickDeploy Custom Modules
+	# Loading SPPS Custom Modules
 	#####################################################
 	Write-Host "" `r
 	Write-Host "******************************************************************************" -ForegroundColor Magenta `r
-	Write-Host "About to import QuickDeploy Modules " -ForegroundColor Magenta `r
+	Write-Host "About to import SPPS Modules " -ForegroundColor Magenta `r
 	Write-Host "******************************************************************************" -ForegroundColor Magenta `r
 	Import-Module "$ModuleFolderPath\SPHelpers\SPHelpers.psm1"
 	Import-Module "$ModuleFolderPath\SPFileUploader\SPFileUploader.psm1"
@@ -79,7 +79,7 @@ try
 	Import-Module "$ModuleFolderPath\SPSitePermissions\SPSitePermissions.psm1"
 	Import-Module "$ModuleFolderPath\SPListPermissions\SPListPermissions.psm1"
 	Import-Module "$ModuleFolderPath\SPSitePages\SPSitePages.psm1"
-	Write-Host "QuickDeploy Modules Successfully Imported" -ForegroundColor Green `r
+	Write-Host "SPPS Modules Successfully Imported" -ForegroundColor Green `r
 	Write-Host "******************************************************************************" -ForegroundColor Magenta `r
 	
 	###########################
