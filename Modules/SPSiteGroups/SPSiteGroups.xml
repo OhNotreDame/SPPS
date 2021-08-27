@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SPSiteGroups>
+	<AddGroup>
+	  <Group>
+		<Name>Group 1</Name>
+		<Description> Group Description </Description>
+		<EditMembership> Members </EditMembership>
+		<ViewMembship>Everyone</ViewMembship>
+		<JoinLeaveRequest> true </JoinLeaveRequest>
+		<GroupOwner>domain\userName</GroupOwner>
+		<DefaultUser>domain\userName</DefaultUser>
+	  </Group>	  
+	  <Group>
+		<Name>Group 2</Name>
+		<Description>Group Description</Description>
+		<EditMembership>Owners</EditMembership>
+		<ViewMembship>Members</ViewMembship>
+		<JoinLeaveRequest>false</JoinLeaveRequest>
+		<GroupOwner>domain\userName</GroupOwner>
+		<DefaultUser>domain\userName</DefaultUser>
+	  </Group>
+	  <Group>
+		<Name>Group 3</Name>
+		<Description>Group Description</Description>
+		<EditMembership>Owners</EditMembership>
+		<ViewMembship>Members</ViewMembship>
+		<JoinLeaveRequest>false</JoinLeaveRequest>
+		<GroupOwner>domain\userName</GroupOwner>
+		<DefaultUser>domain\userName</DefaultUser>
+	  </Group>	  
+	</AddGroup>
+	<UpdateGroup>
+		<Group>
+			<Name>Group 2</Name>
+			<Description>Group Description to update</Description>
+			<EditMembership>Owners</EditMembership>
+			<ViewMembship>Members</ViewMembship>
+			<JoinLeaveRequest>false</JoinLeaveRequest>
+		</Group>	
+		<Group>
+			<Name>Unexisting Group to Update</Name>
+			<Description>Group Description</Description>
+			<EditMembership>Owners</EditMembership>
+			<ViewMembship>Members</ViewMembship>
+			<JoinLeaveRequest>false</JoinLeaveRequest>
+			<GroupOwner>domain\userName</GroupOwner>
+			<DefaultUser>domain\userName</DefaultUser>
+		  </Group>	
+	</UpdateGroup>
+	<DeleteGroup>
+		<Group>
+			<Name>Group 3</Name>
+		</Group>	
+		 <Group>
+			<Name>Unexisting Group to Delete</Name>
+		</Group>
+</DeleteGroup>
+</SPSiteGroups>
