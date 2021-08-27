@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SPCommonStructure>
+	<Fields>
+		<Field ID="{Field_Guid}" Type="Choice" Group="GroupName" DisplayName="Field_DisplayName" Description="Field_Description" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Required="TRUE"  StaticName="Field_StaticName" Name="Field_Name" >
+			<CHOICES>
+				<CHOICE>FR</CHOICE>
+				<CHOICE>DE</CHOICE>
+				<CHOICE>IT</CHOICE>
+			</CHOICES>
+			<Default>FR</Default>
+		</Field>
+		
+	</Fields>
+	<ContentTypes>
+		<ContentType Name="CT_Name" Group="GroupName" Description="CT_Description" ParentContentType="Item" >
+			<FieldRefs>
+				<FieldRef ID="{Field_Guid}" InternalName="Field_InternalName" Name="Field_Name" DisplayName="Field_DisplayName" Required="TRUE" />
+				<FieldRef ID="{Field_Guid}" InternalName="Field_InternalName" Name="Field_Name" DisplayName="Field_DisplayName" Required="FALSE" />
+			</FieldRefs>
+		</ContentType>
+	</ContentTypes>
+	<Lists>
+		<List Name="List_InternalName" Title="List_DisplayName" Type="100" QuickLaunch="FALSE" Description="Journal" Url="/Lists/List_InternalName" DisableAttachments="FALSE" FolderCreation="TRUE" EnableContentTypes="TRUE" VersioningEnabled="TRUE" EnableMinorVersions="FALSE" OrderedList="FALSE"  PrivateList="FALSE" ModeratedList="FALSE" ModerationType="FALSE" >
+			<ContentTypes>
+				<ContentType Name="CT_Name" SetAsDefault="TRUE"/>
+			</ContentTypes>
+		</List>
+	</Lists>
+</SPCommonStructure>
