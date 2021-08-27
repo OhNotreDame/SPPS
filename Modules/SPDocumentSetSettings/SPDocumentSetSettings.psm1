@@ -67,12 +67,11 @@ function setDocumentFolderSettings()
 				$ctName = $ctType.Name
 				Write-Host "[$functionName] About to customize Document Set (content-type) '$ctName'." -ForegroundColor Magenta `r
 				
-				$ctExists = $curWeb.AvailableContentTypes[$ctName]
-				if($ctExists -eq $true)
+				$ctExists = $curWeb.ContentTypes[$ctName]
+				if($ctExists -ne $null)
 				{					
 					$currentCT = $curWeb.ContentTypes[$ctName]
 					$docSet = [Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetTemplate]::GetDocumentSetTemplate($currentCT)
-			
 					# Allow Content Types
 					if($ctType.AllowedContentTypes -ne $null -and $ctType.AllowedContentTypes.HasChildNodes)
 					{
@@ -84,6 +83,7 @@ function setDocumentFolderSettings()
 							$contentTypeToAddName=$curWeb.ContentTypes[$contentTypeToAdd.Name]
 							$docSet.AllowedContentTypes.Add($contentTypeToAddName.Id)			
 						}
+                        Write-Host "[$functionName] Document Set 'AllowedContentTypes' have been set." -ForegroundColor Green `r
 					}
 					else
 					{
@@ -94,12 +94,13 @@ function setDocumentFolderSettings()
 					if($ctType.SharedFields -ne $null -and $ctType.SharedFields.HasChildNodes)
 					{
 						Write-Host "[$functionName] About to define 'SharedFields' for Content-Type '$ctName'." -ForegroundColor Cyan `r
-						
 						foreach($SharedField in $ctType.SharedFields.SharedField)
 						{
-							$fieldToShare= New-Object Microsoft.SharePoint.SpField -ArgumentList @($curWeb.Fields,$SharedField.Name)
+							$SharedField.Name
+                            $fieldToShare= New-Object Microsoft.SharePoint.SpField -ArgumentList @($curWeb.Fields,$SharedField.Name)
 							$docSet.SharedFields.Add($fieldToShare)
 						}
+                        Write-Host "[$functionName] Document Set 'SharedFields' have been set." -ForegroundColor Green `r
 					}
 					else
 					{
@@ -116,6 +117,7 @@ function setDocumentFolderSettings()
 							$welcomeFieldToAdd= New-Object Microsoft.SharePoint.SpField -ArgumentList @($curWeb.Fields,$welcomeField.Name)
 							$docSet.welcomePageFields.Add($welcomeFieldToAdd)
 						}
+                        Write-Host "[$functionName] Document Set 'WelcomePageFields' have been set." -ForegroundColor Green `r
 					}
 					else
 					{
@@ -125,7 +127,7 @@ function setDocumentFolderSettings()
 					#Update DocSet Content-Type Object
 					$docSet.Update($true)
 					$curWeb.Update();
-					Write-Host "[$functionName] Document Set settings have been updated." -ForegroundColor Green `r
+					Write-Host "[$functionName] Document Set settings have been fully updated." -ForegroundColor Green `r
 				}
 				else
 				{
@@ -155,3 +157,123 @@ function setDocumentFolderSettings()
 		Write-Debug "[$functionName] Exiting function"
     }
 }
+
+
+<#
+.SYNOPSIS
+	Setup default view for a List DocSet
+	
+.DESCRIPTION
+	Setup default view for a List DocSet
+	
+.PARAMETER siteUrl
+	URL of the SharePoint Site
+
+.PARAMETER listName
+	Name of the List where the DocSet must be configured
+	
+.PARAMETER ctName
+	Name of the DocSet Content-Type to be configured
+		
+.PARAMETER viewName
+	Name of the View to be set as default for the Welcome Page
+	
+.EXAMPLE
+	setDocumentSetDefaultView -siteURL <SiteURL> -listName <ListName> -ctName <ContentTypeName> -viewName <ViewName>
+	
+.OUTPUTS
+	None
+
+.LINK
+	None
+	
+.NOTES
+	Created by: JBO
+	Created: 14.12.2020
+	Last Updated by: JBO
+	Last Updated: 14.12.2020
+#>
+function setDocumentSetDefaultView()
+{
+
+	[CmdletBinding()]
+	param
+	(
+		[Parameter(Mandatory=$true, Position=1)]
+		[string]$siteURL,
+		[Parameter(Mandatory=$true, Position=2)]
+		[string]$listName,
+		[Parameter(Mandatory=$true, Position=3)]
+		[string]$ctName,
+		[Parameter(Mandatory=$true, Position=4)]
+		[string]$viewName
+	)
+
+    try
+    {
+		$functionName = $MyInvocation.MyCommand.Name
+		Write-Debug "[$functionName] Entering function" 
+		Write-Debug "[$functionName] Parameter / siteURL: $siteURL"
+	
+		$curWeb = Get-SPWeb $siteURL -ErrorAction SilentlyContinue
+        if($curWeb -ne $null)
+        {
+			$curList= $curWeb.Lists[$listName]
+			if($curList -ne $null)
+			{
+				$defaultView = $curList.Views[$viewName]
+				if($defaultView -ne $null)
+				{
+					$curCT_DocSet = $curList.ContentTypes[$ctName]
+					if($curCT_DocSet -ne $null)
+					{
+						Write-Host "[$functionName] About to set '$viewName' as default view for the Document Set '$ctName' on list '$listName'." -ForegroundColor Cyan `r
+						$docSet = [Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetTemplate]::GetDocumentSetTemplate($curCT_DocSet)
+						$docSet.WelcomePageView = $defaultView 
+						$docSet.Update($true)
+						Write-Host "[$functionName] Default view successfully set to '$viewName' on the Document Set '$ctName' of list '$listName'." -ForegroundColor Green `r
+					}
+					else
+					{
+						Write-Warning "[$functionName] Content-type '$ctName' could not be found on List '$listName'."
+					}
+				}
+				else
+				{
+					Write-Warning "[$functionName] View '$viewName' could not be found on List '$listName'." 
+				}
+			}
+			else
+			{
+				Write-Warning "[$functionName] List '$listName' could not be found." 
+			}
+		}
+		else
+		{
+			Write-Warning "[$functionName] Site '$siteURL' could not be found." 
+		}	
+	}
+	 catch [Exception]
+    {
+		Write-Host "/!\ [$functionName] An exception has been caught /!\ "  -ForegroundColor Red `r
+		Write-Host "Type: " $_.Exception.GetType().FullName   -ForegroundColor Red `r
+		Write-Host "Message: " $_.Exception.Message  -ForegroundColor Red `r
+		Write-Host "Stacktrace: " $_.Exception.Stacktrace  -ForegroundColor Red `r
+    }
+    finally
+    {
+        if($curWeb -ne $null)
+        {
+           $curWeb.Dispose()
+        }
+		Write-Debug "[$functionName] Exiting function"
+    }
+}
+
+
+
+
+
+
+
+
