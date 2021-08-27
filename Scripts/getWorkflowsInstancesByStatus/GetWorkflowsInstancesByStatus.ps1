@@ -25,6 +25,7 @@
 	https://community.nintex.com/community/build-your-own/blog/2015/04/09/finding-all-of-the-workflows-in-your-farm-using-powershell
 	
 .NOTES
+	Source:  https://github.com/OhNotreDame/SPPS
 	Created by: JBO
 	Created: 11.01.2017
 	Last Updated by: JBO
