@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MMSColumnsMapping>
+	<FieldToMap ID="{Field_GUID}" TermStoreName="{Term_Store_Name}" TermSetName="{Term_Set_Name}" TermGroupName="{Term_Group_Name}"></FieldToMap>
+</MMSColumnsMapping>
